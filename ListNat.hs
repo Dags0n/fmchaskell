@@ -2,7 +2,7 @@
 {-# HLINT ignore "Use foldr" #-}
 module ListNat where
 
-import Prelude hiding (length, sum, product, (++), reverse)
+import Prelude hiding (length, sum, product, (++), reverse, Bool, False, True)
 import Nat
 import Bool
 
@@ -30,3 +30,7 @@ product (x : xs) = mult x (product xs)
 reverse :: ListNat -> ListNat
 reverse [] = []
 reverse (x : xs) = (++) (reverse xs) [x]
+
+allEven :: ListNat -> Bool
+allEven (x : xs) = if_then_else_ (ev x) (allEven xs) False
+allEven [] = True
