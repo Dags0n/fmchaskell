@@ -34,3 +34,7 @@ reverse (x : xs) = (++) (reverse xs) [x]
 allEven :: ListNat -> Bool
 allEven (x : xs) = if_then_else_ (ev x) (allEven xs) False
 allEven [] = True
+
+anyEven :: ListNat -> Bool
+anyEven (x : xs) = if_then_else_ (ev x) True (anyEven xs)
+anyEven [] = False
