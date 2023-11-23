@@ -43,3 +43,18 @@ max :: Nat -> Nat -> Nat
 max O m = m
 max n O = n
 max (S n) (S m) = S (max n m)
+
+-- div :: (Nat, Nat) -> (Nat, Nat)
+
+-- quot :: (Nat, Nat) -> Nat
+
+-- rem ::(Nat, Nat) -> Nat
+
+-- gcd :: (Nat, Nat) -> Nat
+
+-- lcm :: (Nat, Nat) -> Nat
+
+monus :: Nat -> Nat -> Nat
+monus (S n) (S m) = monus n m
+monus n O = n
+monus O _ = O
