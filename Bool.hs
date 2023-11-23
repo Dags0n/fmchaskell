@@ -17,3 +17,8 @@ leq :: Nat -> Nat -> Bool
 leq (S n) (S m) = leq n m
 leq O _ = True
 leq _ _ = False
+
+ev :: Nat -> Bool
+ev (S (S n)) = ev n
+ev O = True
+ev _ = False
