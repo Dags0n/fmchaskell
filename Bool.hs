@@ -34,3 +34,9 @@ isMul3 :: Nat -> Bool
 isMul3 (S (S n)) = isMul3 n 
 isMul3 O = True
 isMul3 _ = False
+
+-- divides :: Nat -> Nat -> Bool
+
+isZero :: Nat -> Bool
+isZero O = True
+isZero _ = False
