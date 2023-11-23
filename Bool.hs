@@ -12,3 +12,8 @@ data Bool = False | True
 if_then_else_ :: Bool -> a -> a -> a
 if_then_else_ True n _ = n
 if_then_else_ False _ m = m
+
+leq :: Nat -> Nat -> Bool
+leq (S n) (S m) = leq n m
+leq O _ = True
+leq _ _ = False
