@@ -29,3 +29,8 @@ pred (S n) = n
 fact :: Nat -> Nat
 fact O = S O
 fact (S n) = mult (S n) (fact n)
+
+fib :: Nat -> Nat
+fib O = O
+fib (S O) = S O
+fib (S (S n)) = sum (fib (S n)) (fib n)
