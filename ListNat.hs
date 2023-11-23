@@ -2,7 +2,7 @@
 {-# HLINT ignore "Use foldr" #-}
 module ListNat where
 
-import Prelude hiding (length, sum)
+import Prelude hiding (length, sum, product)
 import Nat
 import Bool
 
@@ -17,3 +17,7 @@ length (x : xs) = S (length xs)
 sumLN :: ListNat -> Nat
 sumLN [] = O
 sumLN (x : xs) = sum x (sumLN xs)
+
+product :: ListNat -> Nat
+product [] = S O
+product (x : xs) = mult x (product xs)
