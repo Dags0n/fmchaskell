@@ -1,6 +1,6 @@
 module Nat where
 
-import Prelude hiding (sum, pred, min)
+import Prelude hiding (sum, pred, min, max)
 
 data Nat = O | S Nat
     deriving ( Eq , Show )
@@ -38,3 +38,8 @@ fib (S (S n)) = sum (fib (S n)) (fib n)
 min :: Nat -> Nat -> Nat
 min (S n) (S m) = S (min m n)
 min _ _ = O
+
+max :: Nat -> Nat -> Nat
+max O m = m
+max n O = n
+max (S n) (S m) = S (max n m)
