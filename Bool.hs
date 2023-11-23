@@ -29,3 +29,8 @@ ev _ = False
 
 odd :: Nat -> Bool
 odd n = not (ev n)
+
+isMul3 :: Nat -> Bool
+isMul3 (S (S n)) = isMul3 n 
+isMul3 O = True
+isMul3 _ = False
