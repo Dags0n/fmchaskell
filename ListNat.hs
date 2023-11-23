@@ -42,3 +42,7 @@ anyEven [] = False
 allOdd :: ListNat -> Bool
 allOdd (x : xs) = if_then_else_ (odd x) (allOdd xs) False
 allOdd [] = True
+
+anyOdd :: ListNat -> Bool
+anyOdd (x : xs) = if_then_else_ (odd x) True (anyOdd xs)
+anyOdd [] = False
