@@ -17,3 +17,7 @@ mult n (S m) = sum n (mult n m)
 pow :: Nat -> Nat -> Nat
 pow n O = S O
 pow n (S m) = mult n (pow n m)
+
+double :: Nat -> Nat
+double O = O
+double (S n) = S (S (double n))
