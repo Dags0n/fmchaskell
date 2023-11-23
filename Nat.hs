@@ -1,6 +1,6 @@
 module Nat where
 
-import Prelude hiding (sum)
+import Prelude hiding (sum, pred)
 
 data Nat = O | S Nat
     deriving ( Eq , Show )
@@ -21,3 +21,7 @@ pow n (S m) = mult n (pow n m)
 double :: Nat -> Nat
 double O = O
 double (S n) = S (S (double n))
+
+pred :: Nat -> Nat
+pred O = O
+pred (S n) = n
